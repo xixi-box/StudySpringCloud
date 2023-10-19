@@ -6,17 +6,12 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-/**
- * @author xixibox
- * @version 1.0
- * @date 2023/10/18 14:56
- */
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment implements Serializable {
-    private int id;
+public class Payment implements Serializable
+{
+    private Long id;
     private String serial;
-
-
 }
