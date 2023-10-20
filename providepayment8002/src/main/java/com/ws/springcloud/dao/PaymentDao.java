@@ -1,8 +1,8 @@
 package com.ws.springcloud.dao;
 
+import com.ws.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import com.ws.springcloud.entities.Payment;
 /**
  * @author xixibox
  * @version 1.0

@@ -2,13 +2,13 @@ package com.ws.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
 
  */
 @SpringBootApplication
-//@EnableEurekaClient
+@EnableEurekaClient
 //@RibbonClient(name = "CLOUD-PAYMENT-SERVICE",configuration=MySelfRule.class)
 public class OrderMain80
 {
