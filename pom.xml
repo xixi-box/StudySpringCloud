@@ -15,6 +15,10 @@
         <module>cloud-api-commons</module>
         <module>cloud-eureka-server-7002</module>
         <module>providepayment8002</module>
+        <module>providepayment8004</module>
+        <module>cloud-consumerzk-order802</module>
+        <module>cloud-providerconsul-payment8006</module>
+        <module>cloud-consumerconsul-803</module>
 
     </modules>
 
