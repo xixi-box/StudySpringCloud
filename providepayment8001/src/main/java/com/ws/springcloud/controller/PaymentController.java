@@ -1,8 +1,6 @@
 package com.ws.springcloud.controller;
 
 
-
-
 import com.ws.springcloud.entities.CommonResult;
 import com.ws.springcloud.entities.Payment;
 import com.ws.springcloud.service.PaymentService;
@@ -28,9 +26,9 @@ public class PaymentController {
 
     @Value("${server.port}")
     private String serverPort;
-//
-        @Resource
-        private DiscoveryClient discoveryClient;
+    //
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     @PostMapping(value = "/payment/create")
     public CommonResult<Integer> create(@RequestBody Payment payment) {
@@ -69,12 +67,12 @@ public class PaymentController {
 
         return this.discoveryClient;
     }
-//
-//    @GetMapping(value = "/payment/lb")
-//    public String getPaymentLB() {
-//        return serverPort;
-//    }
-//
+
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLB() {
+        return serverPort;
+    }
+
 //    @GetMapping(value = "/payment/feign/timeout")
 //    public String paymentFeignTimeout() {
 //        // 业务逻辑处理正确，但是需要耗费3秒钟
