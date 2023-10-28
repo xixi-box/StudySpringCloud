@@ -12,17 +12,16 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableCircuitBreaker
-public class PaymentHystrixMain8005
-{
+public class PaymentHystrixMain8005 {
     public static void main(String[] args) {
-            SpringApplication.run(PaymentHystrixMain8005.class, args);
+        SpringApplication.run(PaymentHystrixMain8005.class, args);
     }
 
 
     /**
-     *此配置是为了服务监控而配置，与服务容错本身无关，springcloud升级后的坑
-     *ServletRegistrationBean因为springboot的默认路径不是"/hystrix.stream"，
-     *只要在自己的项目里配置上下面的servlet就可以了
+     * 此配置是为了服务监控而配置，与服务容错本身无关，springcloud升级后的坑
+     * ServletRegistrationBean因为springboot的默认路径不是"/hystrix.stream"，
+     * 只要在自己的项目里配置上下面的servlet就可以了
      */
     @Bean
     public ServletRegistrationBean getServlet() {
@@ -33,4 +32,12 @@ public class PaymentHystrixMain8005
         registrationBean.setName("HystrixMetricsStreamServlet");
         return registrationBean;
     }
+
+//    @Bean
+//    public ServletRegistrationBean hystrixMetricsStreamServlet() {
+//        ServletRegistrationBean registrationBean = new ServletRegistrationBean(new HystrixMetricsStreamServlet());
+//        registrationBean.addUrlMappings("/actuator/hystrix.stream");
+//        return registrationBean;
+//    }
+
 }

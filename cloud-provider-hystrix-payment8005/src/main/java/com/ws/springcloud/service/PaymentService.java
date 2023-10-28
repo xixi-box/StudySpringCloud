@@ -39,6 +39,7 @@ public class PaymentService {
         return "线程池:  " + Thread.currentThread().getName() + "  8001系统繁忙或者运行报错，请稍后再试,id:  " + id + "\t" + "o(╥﹏╥)o";
     }
 
+
     //=====服务熔断
     @HystrixCommand(fallbackMethod = "paymentCircuitBreaker_fallback", commandProperties = {
             @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),// 是否开启断路器
