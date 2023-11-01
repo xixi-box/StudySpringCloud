@@ -46,7 +46,8 @@ public class OrderController {
             return new CommonResult<>(444, "操作失败");
         }
     }
-//
+
+    //
 //    @GetMapping(value = "/consumer/payment/lb")
 //    public String getPaymentLB() {
 //        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
@@ -62,10 +63,10 @@ public class OrderController {
 //
 //    }
 //
-//    // ====================> zipkin+sleuth
-//    @GetMapping("/consumer/payment/zipkin")
-//    public String paymentZipkin() {
-//        String result = restTemplate.getForObject("http://localhost:8001" + "/payment/zipkin/", String.class);
-//        return result;
-//    }
+// ====================> zipkin+sleuth
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin() {
+        String result = restTemplate.getForObject("http://localhost:8001" + "/payment/zipkin/", String.class);
+        return result;
+    }
 }
